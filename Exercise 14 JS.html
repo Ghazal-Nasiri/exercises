@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        const students = [
+            {name: "Alice", grades: [85, 90, 92]},
+            {name: "Bob", grades: [75, 80, 85]},
+            {name: "Spencer", grades: [95,99,98,98]}
+        ];
+        students.map(item => {
+            item.avarage = item.grades.reduce((sum,i) => {
+                sum += i;
+                return sum;
+            }, 0);
+            item.avarage /= item.grades.length;
+        });
+        console.log(students);
+    </script>
+</body>
+</html>
